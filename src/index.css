@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Martian+Mono&family=Montserrat:wght@300;400;800&family=Neucha&family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Martian+Mono&family=Montserrat:wght@300;400;800&family=Neucha&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translate(0px, -10px);}
+  100% { opacity: 1; }
+}
+
+.app {
+  position: absolute;
+  width: 100%;
+  min-width: 320px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.app::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  color: #ffffff;
+  margin: 0;
+}
+
+.pick-destination > :first-child,
+.pick-destination > :nth-child(2),
+.meet-crew > :first-child,
+.meet-crew > :nth-child(2),
+.space-launch > :first-child,
+.space-launch > :nth-child(2) {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 4.72px;
+  opacity: 0.5;
+}
+
+.home,
+.destination,
+.crew,
+.technology {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  .pick-destination > :first-child,
+  .pick-destination > :nth-child(2),
+  .meet-crew > :first-child,
+  .meet-crew > :nth-child(2),
+  .space-launch > :first-child,
+  .space-launch > :nth-child(2) {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    opacity: 0.5;
+  }
+
+  .app {
+    justify-content: flex-start;
+  }
+
+  .home {
+    background-image: url("src/assets/home/background-home-mobile.jpg");
+  }
+  .destination {
+    background-image: url("src/assets/destination/background-destination-mobile.jpg");
+  }
+  .crew {
+    background-image: url("src/assets/crew/background-crew-mobile.jpg");
+  }
+
+  .technology {
+    background-image: url("src/assets/technology/background-technology-mobile.jpg");
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .app {
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1100px) {
+  .home {
+    background-image: url("src/assets/home/background-home-tablet.jpg");
+  }
+  .destination {
+    background-image: url("src/assets/destination/background-destination-tablet.jpg");
+  }
+  .crew {
+    background-image: url("src/assets/crew/background-crew-tablet.jpg");
+  }
+
+  .technology {
+    background-image: url("src/assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@media only screen and (min-width: 1101px) {
+  .home {
+    background-image: url("src/assets/home/background-home-desktop.jpg");
+  }
+  .destination {
+    background-image: url("src/assets/destination/background-destination-desktop.jpg");
+  }
+  .crew {
+    background-image: url("src/assets/crew/background-crew-desktop.jpg");
+  }
+
+  .technology {
+    background-image: url("src/assets/technology/background-technology-desktop.jpg");
+  }
+}
+
+@media only screen and (min-width: 1850px) {
+  .app {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-height: 908px) and (min-width: 1200px) {
+  .app {
+    justify-content: space-between;
+  }
+}
